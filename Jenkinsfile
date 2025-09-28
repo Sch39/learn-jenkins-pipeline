@@ -14,6 +14,8 @@ pipeline{
             steps{
                 echo("build project 1")
                 echo("build project 2")
+                echo("Sleep for 5 seconds")
+                sleep 5
                 echo("build project 3")
             }
         }
