@@ -12,11 +12,16 @@ pipeline{
         }
         stage("build"){
             steps{
-                echo("build project 1")
-                echo("build project 2")
-                echo("Sleep for 5 seconds")
-                sleep 5
-                echo("build project 3")
+                // echo("build project 1")
+                // echo("build project 2")
+                // echo("Sleep for 5 seconds")
+                // sleep 5
+                // echo("build project 3")
+                script {
+                    for(i=0; i<3; i++){
+                        echo("build project ${i}")
+                    }
+                }
                 echo("Start build with maven")
                 sh "java -version"
                 sh "./mvnw clean compile test"
