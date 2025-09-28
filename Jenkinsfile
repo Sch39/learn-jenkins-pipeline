@@ -12,7 +12,9 @@ pipeline{
         }
         stage("build"){
             steps{
-                echo("build project")
+                echo("build project 1")
+                echo("build project 2")
+                echo("build project 3")
             }
         }
         stage("test"){
