@@ -10,6 +10,21 @@ pipeline{
                 echo("hello pipeline")
             }
         }
+        stage("build"){
+            steps{
+                echo("build project")
+            }
+        }
+        stage("test"){
+            steps{
+                echo("test project")
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo("deploy project")
+            }
+        }
     }
 
     post {
