@@ -17,6 +17,10 @@ pipeline{
                 echo("Sleep for 5 seconds")
                 sleep 5
                 echo("build project 3")
+                echo("Start build with maven")
+                sh "java -version"
+                sh "./mvnw clean compile test"
+                echo("Build finished")
             }
         }
         stage("test"){
